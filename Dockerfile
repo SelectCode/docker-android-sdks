@@ -20,4 +20,4 @@ RUN echo y | android-sdk-linux/tools/bin/sdkmanager "extras;google;m2repository"
 
 ENV ANDROID_HOME $PWD/android-sdk-linux
 
-ENTRYPOINT android-sdk-linux/tools/bin/sdkmanager list && /bin/bash
+ENTRYPOINT android-sdk-linux/tools/bin/sdkmanager --list && /bin/bash
