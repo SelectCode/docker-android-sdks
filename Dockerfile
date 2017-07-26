@@ -9,7 +9,7 @@ RUN apt-get --quiet update --yes
 RUN apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
 
 RUN wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip && \
-    unzip android-sdk.zip
+    unzip android-sdk.zip -d android-sdk-linux/
 
 RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter android-${ANDROID_TARGET_SDK} && \
     echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter platform-tools && \
