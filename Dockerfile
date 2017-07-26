@@ -21,4 +21,4 @@ RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all -
 
 ENV ANDROID_HOME $PWD/android-sdk-linux
 
-ENTRYPOINT sdkmanager --list && /bin/bash
+ENTRYPOINT android-sdk-linux/tools/android list && /bin/bash
