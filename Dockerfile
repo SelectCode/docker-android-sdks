@@ -2,7 +2,7 @@ FROM openjdk:8-jdk
 MAINTAINER Florian Baader <florian.baader@selectcode.de>
 
 ENV ANDROID_TARGET_SDK="26" \
-    ANDROID_BUILD_TOOLS="26" \
+    ANDROID_BUILD_TOOLS="26.0.1" \
     ANDROID_SDK_TOOLS="24.4.1"
 
 RUN apt-get --quiet update --yes
