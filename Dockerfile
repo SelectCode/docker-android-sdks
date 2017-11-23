@@ -1,8 +1,8 @@
 FROM openjdk:8-jdk
 MAINTAINER Florian Baader <florian.baader@selectcode.de>
 
-ENV ANDROID_TARGET_SDK="26" \
-    ANDROID_BUILD_TOOLS="26.0.1"
+ENV ANDROID_TARGET_SDK="27" \
+    ANDROID_BUILD_TOOLS="26.0.2"
 
 RUN apt-get --quiet update --yes
 RUN apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
@@ -20,4 +20,3 @@ RUN echo y | android-sdk-linux/tools/bin/sdkmanager "extras;google;m2repository"
 
 ENV ANDROID_HOME $PWD/android-sdk-linux
 
-ENTRYPOINT android-sdk-linux/tools/bin/sdkmanager --list && /bin/bash
