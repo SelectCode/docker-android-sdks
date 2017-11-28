@@ -8,8 +8,8 @@ ENV ANDROID_TARGET_SDK="27" \
     ANDROID_BUILD_TOOLS="26.0.2"
 
 # Install unzipping tools
-RUN apt-get --quiet update --yes
-RUN apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
+RUN sudo apt-get --quiet update --yes
+RUN sudo apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
 
 RUN wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip && \
     unzip android-sdk.zip -d android-sdk-linux/
