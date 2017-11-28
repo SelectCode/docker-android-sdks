@@ -1,4 +1,4 @@
-FROM gradle:alpine
+FROM gradle
 LABEL author="Florian baader <florian.baader@selectcode.de>"
 LABEL version="1.1"
 LABEL description="Container to build android apps"
